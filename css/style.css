@@ -83,7 +83,7 @@ img{
          margin-top: 20rem;
      }
 }
-@media (min-width:768px) {1
+@media (min-width:768px) {
      .barra{
          display: flex;
          justify-content: space-between;
@@ -158,7 +158,8 @@ img{
 .cursos{
     list-style: none;
 }
-.widget--curso__label{
+.widget--curso__label,
+.curso__label{
     font-family: var(--fuenteheading);
     font-weight: bold;
 
@@ -184,15 +185,25 @@ img{
 }
 
 /* Nosotros */
-
 @media (min-width:768px) {
-     .sobre-nosotros{
-        display:flex;
-        justify-content: space-between;
-        }
-     .sobre-nosotros__imagen,
-     .sobre-nosotros__texto{
-        flex-basis: calc(50% - 1rem );
+    .sobre-nosotros{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 2rem;
+    }
+}
+/* Curso */
+.curso{
+    padding: 3rem 0;
+    border-bottom: 1px solid var(--claro);
+}
+@media (min-width:768px) {
+     .curso{
+        display:grid;
+        grid-template-columns: 1fr 2fr;
+        column-gap: 2rem;
      }
 }
-
+.curso:last-of-type{
+    border: none;
+}
